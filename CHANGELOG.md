@@ -12,3 +12,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - React component snippets
 - React lifecycle snippets
 - React test snippets
+
+## [0.0.2] - 2018-05-03
+
+### Added
+- React high order component snippet
+
+### Changed
+- Remove recompose from snippets
+- Move exports to the end of snippets
+- Use arrow function instead of function
+
+### Fixed
+- Add missing state in react component with redux snippet
+- Import test component from current directory

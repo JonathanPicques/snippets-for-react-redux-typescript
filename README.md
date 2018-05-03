@@ -22,7 +22,18 @@ Add several useful snippets for react and redux development in typescript.
 | `componentDidMount`               | Generate react componentDidMount()              |
 | `componentWillReceiveProps`       | Generate react componentWillReceiveProps()      |
 | `reactTests`                      | Generate react tests with enzyme chai and sinon |
+| `reactHighOrderComponent`         | Generate react high order component             |
 
-### 0.0.1
+## 0.0.2
 
-Initial release of Snippets for React/Redux (typescript)
+### Added
+- React high order component snippet
+
+### Changed
+- Remove recompose from snippets
+- Move exports to the end of snippets
+- Use arrow function instead of function
+
+### Fixed
+- Add missing state in react component with redux snippet
+- Import test component from current directory
