@@ -14,7 +14,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - React test snippets
 
 ## [0.0.2] - 2018-05-03
-
 ### Added
 - React high order component snippet
 
@@ -26,3 +25,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 - Add missing state in react component with redux snippet
 - Import test component from current directory
+
+## [0.0.3] - 2018-05-30
+### Added
+- React componentWillUnmount snippet
+
+### Changed
+- Use named exports instead of default exports
+
+### Fixed
+- React high order component use ComponentType instead of ComponentClass to allow wrapping stateless components

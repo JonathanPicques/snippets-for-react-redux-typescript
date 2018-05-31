@@ -18,22 +18,19 @@ Add several useful snippets for react and redux development in typescript.
 | `reactComponentWithRedux`         | Generate react component with redux             |
 | `render`                          | Generate react render()                         |
 | `componentWillMount`              | Generate react componentWillMount()             |
-| `componentWillUpdate`             | Generate react componentWillUpdate()            |
 | `componentDidMount`               | Generate react componentDidMount()              |
 | `componentWillReceiveProps`       | Generate react componentWillReceiveProps()      |
+| `componentWillUnmount`            | Generate react componentWillUnmount()           |
+| `componentWillUpdate`             | Generate react componentWillUpdate()            |
 | `reactTests`                      | Generate react tests with enzyme chai and sinon |
 | `reactHighOrderComponent`         | Generate react high order component             |
 
-## 0.0.2
-
+## 0.0.3
 ### Added
-- React high order component snippet
+- React componentWillUnmount snippet
 
 ### Changed
-- Remove recompose from snippets
-- Move exports to the end of snippets
-- Use arrow function instead of function
+- Use named exports instead of default exports
 
 ### Fixed
-- Add missing state in react component with redux snippet
-- Import test component from current directory
+- React high order component use ComponentType instead of ComponentClass to allow wrapping stateless components

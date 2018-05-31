@@ -26,7 +26,7 @@
             "\t}",
             "}",
             "",
-            "export default $1;"
+            "export {$1};"
         ],
         "description": "Generate react component"
     },
@@ -43,7 +43,7 @@
             "\t}",
             "}",
             "",
-            "export default $1;"
+            "export {$1};"
         ],
         "description": "Generate react component with props"
     },
@@ -62,7 +62,7 @@
             "\t}",
             "}",
             "",
-            "export default $1;"
+            "export {$1};"
         ],
         "description": "Generate react component with props and state"
     },
@@ -97,7 +97,8 @@
             "\treturn {};",
             "};",
             "",
-            "export default connect(mapStateToProps, mapDispatchToProps)($1);"
+            "const $1Connected = connect(mapStateToProps, mapDispatchToProps)($1);",
+            "export {$1Connected as $1};"
         ],
         "description": "Generate react component with redux"
     },
@@ -119,15 +120,6 @@
         ],
         "description": "Generate react componentWillMount()"
     },
-    "Generate react componentWillUpdate()": {
-        "prefix": "componentWillUpdate",
-        "body": [
-            "public componentWillUpdate(): void {",
-            "\t$1",
-            "}"
-        ],
-        "description": "Generate react componentWillUpdate()"
-    },
     "Generate react componentDidMount()": {
         "prefix": "componentDidMount",
         "body": [
@@ -146,14 +138,32 @@
         ],
         "description": "Generate react componentWillReceiveProps()"
     },
+    "Generate react componentWillUpdate()": {
+        "prefix": "componentWillUpdate",
+        "body": [
+            "public componentWillUpdate(): void {",
+            "\t$1",
+            "}"
+        ],
+        "description": "Generate react componentWillUpdate()"
+    },
+    "Generate react componentWillUnmount()": {
+        "prefix": "componentWillUnmount",
+        "body": [
+            "public componentWillUnmount(): void {",
+            "\t$1",
+            "}"
+        ],
+        "description": "Generate react componentWillUnmount()"
+    },
     "Generate react high order component": {
         "prefix": "reactHighOrderComponent",
         "body": [
             "import * as React from 'react';",
             "",
-            "export interface With$1Props {}",
+            "interface With$1Props {}",
             "",
-            "export const with$1 = <Props extends {}>(WrappedComponent: React.ComponentClass<Props & With$1Props>) => {",
+            "const with$1 = <Props extends {}>(WrappedComponent: React.ComponentType<Props & With$1Props>) => {",
             "\treturn class extends React.PureComponent<Props & With$1Props> {",
             "\t\tpublic render(): React.ReactNode {",
             "\t\t\treturn <WrappedComponent {...this.props} />;",
@@ -161,7 +171,8 @@
             "\t};",
             "};",
             "",
-            "export default with$1;"
+            "export {with$1};",
+            "export {With$1Props};"
         ],
         "description": "Generate react high order component"
     },
