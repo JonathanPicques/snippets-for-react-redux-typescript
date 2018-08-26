@@ -25,12 +25,6 @@ Add several useful snippets for react and redux development in typescript.
 | `reactTests`                      | Generate react tests with enzyme chai and sinon |
 | `reactHighOrderComponent`         | Generate react high order component             |
 
-## 0.0.3
-### Added
-- React componentWillUnmount snippet
-
+## 0.0.4
 ### Changed
-- Use named exports instead of default exports
-
-### Fixed
-- React high order component use ComponentType instead of ComponentClass to allow wrapping stateless components
+- Use AppReduxState instead of RootState

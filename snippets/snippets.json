@@ -89,7 +89,7 @@
             "\t}",
             "}",
             "",
-            "const mapStateToProps = (state: RootState): $1StateProps => {",
+            "const mapStateToProps = (state: AppReduxState): $1StateProps => {",
             "\treturn {};",
             "};",
             "",
@@ -98,6 +98,7 @@
             "};",
             "",
             "const $1Connected = connect(mapStateToProps, mapDispatchToProps)($1);",
+            "",
             "export {$1Connected as $1};"
         ],
         "description": "Generate react component with redux"

@@ -35,3 +35,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 - React high order component use ComponentType instead of ComponentClass to allow wrapping stateless components
+
+## [0.0.4] - 2018-08-26
+
+### Changed
+- Use AppReduxState instead of RootState
