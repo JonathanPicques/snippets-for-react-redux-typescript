@@ -1,205 +1,188 @@
 {
-    "Import react": {
-        "prefix": "importReact",
-        "body": [
-            "import * as React from 'react';"
-        ],
-        "description": "Import react"
-    },
-    "Import react and redux": {
-        "prefix": "importReactAndRedux",
-        "body": [
-            "import * as React from 'react';",
-            "import {connect} from 'react-redux';",
-            "import {Dispatch} from 'redux';"
-        ],
-        "description": "Import react and redux"
-    },
-    "Generate react component": {
-        "prefix": "reactComponent",
-        "body": [
-            "import * as React from 'react';",
-            "",
-            "class $1 extends React.PureComponent {",
-            "\tpublic render(): React.ReactNode {",
-            "\t\treturn $2;",
-            "\t}",
-            "}",
-            "",
-            "export {$1};"
-        ],
-        "description": "Generate react component"
-    },
-    "Generate react component with props": {
-        "prefix": "reactComponentWithProps",
-        "body": [
-            "import * as React from 'react';",
-            "",
-            "interface $1Props {}",
-            "",
-            "class $1 extends React.PureComponent<$1Props> {",
-            "\tpublic render(): React.ReactNode {",
-            "\t\treturn $2;",
-            "\t}",
-            "}",
-            "",
-            "export {$1};"
-        ],
-        "description": "Generate react component with props"
-    },
-    "Generate react component with props and state": {
-        "prefix": "reactComponentWithPropsAndState",
-        "body": [
-            "import * as React from 'react';",
-            "",
-            "interface $1Props {}",
-            "",
-            "interface $1State {}",
-            "",
-            "class $1 extends React.PureComponent<$1Props, $1State> {",
-            "\tpublic render(): React.ReactNode {",
-            "\t\treturn $2;",
-            "\t}",
-            "}",
-            "",
-            "export {$1};"
-        ],
-        "description": "Generate react component with props and state"
-    },
-    "Generate react component with redux": {
-        "prefix": "reactComponentWithRedux",
-        "body": [
-            "import * as React from 'react';",
-            "import {connect} from 'react-redux';",
-            "import {Dispatch} from 'redux';",
-            "",
-            "interface $1Props {}",
-            "",
-            "interface $1State {}",
-            "",
-            "interface $1StateProps {}",
-            "",
-            "interface $1DispatchProps {}",
-            "",
-            "interface $1CombinedProps extends $1Props, $1StateProps, $1DispatchProps {}",
-            "",
-            "class $1 extends React.PureComponent<$1CombinedProps, $1State> {",
-            "\tpublic render(): React.ReactNode {",
-            "\t\treturn $2;",
-            "\t}",
-            "}",
-            "",
-            "const mapStateToProps = (state: AppReduxState): $1StateProps => {",
-            "\treturn {};",
-            "};",
-            "",
-            "const mapDispatchToProps = (dispatch: Dispatch): $1DispatchProps => {",
-            "\treturn {};",
-            "};",
-            "",
-            "const $1Connected = connect(mapStateToProps, mapDispatchToProps)($1);",
-            "",
-            "export {$1Connected as $1};"
-        ],
-        "description": "Generate react component with redux"
-    },
-    "Generate react render()": {
-        "prefix": "render",
-        "body": [
-            "public render(): React.ReactNode {",
-            "\treturn $1;",
-            "}"
-        ],
-        "description": "Generate react render()"
-    },
-    "Generate react componentWillMount()": {
-        "prefix": "componentWillMount",
-        "body": [
-            "public componentWillMount(): void {",
-            "\t$1",
-            "}"
-        ],
-        "description": "Generate react componentWillMount()"
-    },
-    "Generate react componentDidMount()": {
-        "prefix": "componentDidMount",
-        "body": [
-            "public componentDidMount(): void {",
-            "\t$1",
-            "}"
-        ],
-        "description": "Generate react componentDidMount()"
-    },
-    "Generate react componentWillReceiveProps()": {
-        "prefix": "componentWillReceiveProps",
-        "body": [
-            "public componentWillReceiveProps(props: $1CombinedProps): void {",
-            "\t$2",
-            "}"
-        ],
-        "description": "Generate react componentWillReceiveProps()"
-    },
-    "Generate react componentWillUpdate()": {
-        "prefix": "componentWillUpdate",
-        "body": [
-            "public componentWillUpdate(): void {",
-            "\t$1",
-            "}"
-        ],
-        "description": "Generate react componentWillUpdate()"
-    },
-    "Generate react componentWillUnmount()": {
-        "prefix": "componentWillUnmount",
-        "body": [
-            "public componentWillUnmount(): void {",
-            "\t$1",
-            "}"
-        ],
-        "description": "Generate react componentWillUnmount()"
-    },
-    "Generate react high order component": {
-        "prefix": "reactHighOrderComponent",
-        "body": [
-            "import * as React from 'react';",
-            "",
-            "interface With$1Props {}",
-            "",
-            "const with$1 = <Props extends {}>(WrappedComponent: React.ComponentType<Props & With$1Props>) => {",
-            "\treturn class extends React.PureComponent<Props & With$1Props> {",
-            "\t\tpublic render(): React.ReactNode {",
-            "\t\t\treturn <WrappedComponent {...this.props} />;",
-            "\t\t}",
-            "\t};",
-            "};",
-            "",
-            "export {with$1};",
-            "export {With$1Props};"
-        ],
-        "description": "Generate react high order component"
-    },
-    "Generate react tests": {
-        "prefix": "reactTests",
-        "body": [
-            "import * as React from 'react';",
-            "import * as Adapter from 'enzyme-adapter-react-16';",
-            "",
-            "import {spy} from 'sinon';",
-            "import {expect} from 'chai';",
-            "import {configure, mount, shallow} from 'enzyme';",
-            "",
-            "import $1 from './$1';",
-            "",
-            "configure({adapter: new Adapter()});",
-            "",
-            "describe('<$1/>', () => {",
-            "\tit('mount renders', () => {",
-            "\t\tmount(<$1/>);",
-            "\t});",
-            "\tit('shallow renders', () => {",
-            "\t\tshallow(<$1/>);",
-            "\t});",
-            "});"
-        ],
-        "description": "Generate react tests with enzyme, chai and sinon"
-    }
+  "Import react": {
+    "prefix": "importReact",
+    "body": [
+      "import * as React from 'react';"
+    ],
+    "description": "Import react"
+  },
+  "Import react and redux": {
+    "prefix": "importReactAndRedux",
+    "body": [
+      "import * as React from 'react';",
+      "import {connect} from 'react-redux';",
+      "import {Dispatch} from 'redux';"
+    ],
+    "description": "Import react and redux"
+  },
+  "Generate react component": {
+    "prefix": "reactComponent",
+    "body": [
+      "import * as React from 'react';",
+      "",
+      "export class $1 extends React.PureComponent {",
+      "\tpublic render(): React.ReactNode {",
+      "\t\treturn $2;",
+      "\t}",
+      "}"
+    ],
+    "description": "Generate react component"
+  },
+  "Generate react component with props": {
+    "prefix": "reactComponentWithProps",
+    "body": [
+      "import * as React from 'react';",
+      "",
+      "interface $1Props {}",
+      "",
+      "export class $1 extends React.PureComponent<$1Props> {",
+      "\tpublic render(): React.ReactNode {",
+      "\t\treturn $2;",
+      "\t}",
+      "}"
+    ],
+    "description": "Generate react component with props"
+  },
+  "Generate react component with props and state": {
+    "prefix": "reactComponentWithPropsAndState",
+    "body": [
+      "import * as React from 'react';",
+      "",
+      "interface $1Props {}",
+      "",
+      "interface $1State {}",
+      "",
+      "export class $1 extends React.PureComponent<$1Props, $1State> {",
+      "\tpublic render(): React.ReactNode {",
+      "\t\treturn $2;",
+      "\t}",
+      "}"
+    ],
+    "description": "Generate react component with props and state"
+  },
+  "Generate react component with redux": {
+    "prefix": "reactComponentWithRedux",
+    "body": [
+      "import * as React from 'react';",
+      "import {connect} from 'react-redux';",
+      "import {Dispatch} from 'redux';",
+      "",
+      "interface $1Props {}",
+      "",
+      "interface $1State {}",
+      "",
+      "interface $1StateProps {}",
+      "",
+      "interface $1DispatchProps {}",
+      "",
+      "interface $1CombinedProps extends $1Props, $1StateProps, $1DispatchProps {}",
+      "",
+      "class $1 extends React.PureComponent<$1CombinedProps, $1State> {",
+      "\tpublic render(): React.ReactNode {",
+      "\t\treturn $2;",
+      "\t}",
+      "}",
+      "",
+      "const mapStateToProps = (state: AppReduxState): $1StateProps => {",
+      "\treturn {};",
+      "};",
+      "",
+      "const mapDispatchToProps = (dispatch: Dispatch): $1DispatchProps => {",
+      "\treturn {};",
+      "};",
+      "",
+      "const $1Connected = connect(mapStateToProps, mapDispatchToProps)($1);",
+      "",
+      "export {$1Connected as $1};"
+    ],
+    "description": "Generate react component with redux"
+  },
+  "Generate react render()": {
+    "prefix": "render",
+    "body": [
+      "public render(): React.ReactNode {",
+        "\treturn $1;",
+        "}"
+      ],
+    "description": "Generate react render()"
+  },
+  "Generate react componentWillMount()": {
+    "prefix": "componentWillMount",
+    "body": [
+      "public componentWillMount(): void {",
+      "\t$1",
+      "}"
+    ],
+    "description": "Generate react componentWillMount()"
+  },
+  "Generate react componentDidMount()": {
+    "prefix": "componentDidMount",
+    "body": [
+      "public componentDidMount(): void {",
+      "\t$1",
+      "}"
+    ],
+    "description": "Generate react componentDidMount()"
+  },
+  "Generate react componentWillReceiveProps()": {
+    "prefix": "componentWillReceiveProps",
+    "body": [
+      "public componentWillReceiveProps(props: $1CombinedProps): void {",
+      "\t$2",
+      "}"
+    ],
+    "description": "Generate react componentWillReceiveProps()"
+  },
+  "Generate react componentWillUpdate()": {
+    "prefix": "componentWillUpdate",
+    "body": [
+      "public componentWillUpdate(): void {",
+      "\t$1",
+      "}"
+    ],
+    "description": "Generate react componentWillUpdate()"
+  },
+  "Generate react componentWillUnmount()": {
+    "prefix": "componentWillUnmount",
+    "body": [
+      "public componentWillUnmount(): void {",
+      "\t$1",
+      "}"
+    ],
+    "description": "Generate react componentWillUnmount()"
+  },
+  "Generate react getDerivedStateFromProps()": {
+    "prefix": "getDerivedStateFromProps",
+    "body": [
+      "public static getDerivedStateFromProps(props: $2, state: $1): $1 {",
+      "\treturn state;",
+      "}"
+    ],
+    "description": "Generate react getDerivedStateFromProps()"
+  },
+  "Generate react tests": {
+    "prefix": "reactTests",
+    "body": [
+      "import * as React from 'react';",
+      "import * as Adapter from 'enzyme-adapter-react-16';",
+      "",
+      "import {spy} from 'sinon';",
+      "import {expect} from 'chai';",
+      "import {configure, mount, shallow} from 'enzyme';",
+      "",
+      "import $1 from './$1';",
+      "",
+      "configure({adapter: new Adapter()});",
+      "",
+      "describe('<$1/>', () => {",
+      "\tit('mount renders', () => {",
+      "\t\tmount(<$1/>);",
+      "\t});",
+      "\tit('shallow renders', () => {",
+      "\t\tshallow(<$1/>);",
+      "\t});",
+      "});"
+    ],
+    "description": "Generate react tests with enzyme, chai and sinon"
+  }
 }

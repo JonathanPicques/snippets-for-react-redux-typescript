@@ -40,3 +40,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 - Use AppReduxState instead of RootState
+
+## [0.0.5] - 2019-06-18
+
+### Add
+- React getDerivedStateFromProps snippet
+
+### Changed
+- Prefix class with export
+
+### Removed
+- React reactHighOrderComponent snippet

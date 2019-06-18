@@ -1,8 +1,8 @@
-# Snippets for React/Redux (typescript) [![VS Version Badge](https://vsmarketplacebadge.apphb.com/version-short/Celestory.snippets-for-react-redux-typescript.svg)](https://marketplace.visualstudio.com/items?itemName=Celestory.snippets-for-react-redux-typescript)
+# Snippets for React/Redux (Typescript) [![VS Version Badge](https://vsmarketplacebadge.apphb.com/version-short/Celestory.snippets-for-react-redux-typescript.svg)](https://marketplace.visualstudio.com/items?itemName=Celestory.snippets-for-react-redux-typescript)
 
 ## Features
 
-Add several useful snippets for react and redux development in typescript.
+Add several useful snippets for react and redux development in Typescript.
 
 ![Snippets showcase](images/snippets.gif)
 
@@ -22,9 +22,16 @@ Add several useful snippets for react and redux development in typescript.
 | `componentWillReceiveProps`       | Generate react componentWillReceiveProps()      |
 | `componentWillUnmount`            | Generate react componentWillUnmount()           |
 | `componentWillUpdate`             | Generate react componentWillUpdate()            |
+| `getDerivedStateFromProps`        | Generate react getDerivedStateFromProps()       |
 | `reactTests`                      | Generate react tests with enzyme chai and sinon |
-| `reactHighOrderComponent`         | Generate react high order component             |
 
-## 0.0.4
+## 0.0.5
+
+### Add
+- React getDerivedStateFromProps snippet
+
 ### Changed
-- Use AppReduxState instead of RootState
+- Prefix class with export
+
+### Removed
+- React reactHighOrderComponent snippet
