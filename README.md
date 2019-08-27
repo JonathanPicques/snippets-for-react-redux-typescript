@@ -11,27 +11,20 @@ Add several useful snippets for react and redux development in Typescript.
 | Snippet                           | Renders                                         |
 | --------------------------------- | ----------------------------------------------- |
 | `importReact`                     | Import react                                    |
-| `importReactAndRedux`             | Import react and redux                          |
+| `reactTests`                      | Generate react tests with enzyme chai and sinon |
 | `reactComponent`                  | Generate react component                        |
 | `reactComponentWithProps`         | Generate react component with props             |
-| `reactComponentWithPropsAndState` | Generate react component with props and state   |
-| `reactComponentWithRedux`         | Generate react component with redux             |
-| `render`                          | Generate react render()                         |
-| `componentWillMount`              | Generate react componentWillMount()             |
-| `componentDidMount`               | Generate react componentDidMount()              |
-| `componentWillReceiveProps`       | Generate react componentWillReceiveProps()      |
-| `componentWillUnmount`            | Generate react componentWillUnmount()           |
-| `componentWillUpdate`             | Generate react componentWillUpdate()            |
-| `getDerivedStateFromProps`        | Generate react getDerivedStateFromProps()       |
-| `reactTests`                      | Generate react tests with enzyme chai and sinon |
+| `reactUseRefHook`                 | Generate react ref hook                         |
+| `reactUseStateHook`               | Generate react state hook                       |
+| `reactUseCallbackHook`            | Generate react callback hook                    |
 
-## 0.0.5
-
-### Add
-- React getDerivedStateFromProps snippet
+## 0.0.6
+### Added
+- React ref, state and callback hooks snippets
 
 ### Changed
-- Prefix class with export
+- Change react class components to functional components
+- Change react import to its simple form
 
 ### Removed
-- React reactHighOrderComponent snippet
+- React class snippets

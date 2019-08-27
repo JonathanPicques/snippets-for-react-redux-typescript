@@ -37,13 +37,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - React high order component use ComponentType instead of ComponentClass to allow wrapping stateless components
 
 ## [0.0.4] - 2018-08-26
-
 ### Changed
 - Use AppReduxState instead of RootState
 
 ## [0.0.5] - 2019-06-18
-
-### Add
+### Added
 - React getDerivedStateFromProps snippet
 
 ### Changed
@@ -51,3 +49,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Removed
 - React reactHighOrderComponent snippet
+
+## [0.0.6] - 2019-08-27
+### Added
+- React ref, state and callback hooks snippets
+
+### Changed
+- Change react class components to functional components
+- Change react import to its simple form
+
+### Removed
+- React class snippets

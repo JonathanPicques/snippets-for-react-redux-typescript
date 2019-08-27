@@ -2,12 +2,12 @@
     "name": "snippets-for-react-redux-typescript",
     "displayName": "Snippets for React/Redux (typescript)",
     "description": "Code snippets for React and Redux (typescript)",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "author": "Jonathan Picques <jonathan.picques@gmail.com>",
     "publisher": "Celestory",
     "icon": "images/react-logo.png",
     "engines": {
-        "vscode": "^1.5.0"
+        "vscode": "^1.37.0"
     },
     "repository": {
         "type": "git",
